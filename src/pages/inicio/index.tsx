@@ -1,7 +1,8 @@
 
-import Menu from 'components/Menu';
 import cardapio from 'data/cardapio.json';
 import styles from './Inicio.module.scss';
+import stylesTema from '../../styles/Tema.module.scss';
+import nossaCasa from 'assets/nossa_casa.png';
 
 
 export default function Inicio(){
@@ -10,7 +11,7 @@ export default function Inicio(){
 
 	return (
 		<section>
-			<h3 className={styles.titulo}>
+			<h3 className={stylesTema.titulo}>
 				Recomendações da Cozinha
 			</h3>
 			<div className={styles.recomendado}>
@@ -28,6 +29,13 @@ export default function Inicio(){
 						</div>
 					))
 				}
+			</div>
+			<h3 className='stylesTema.titulo'> Nossa casa </h3>
+			<div className={styles.nossaCasa}>
+				<img src={nossaCasa} alt="Casa do Aluroni" />
+				<div className={styles.nossaCasa__endereco}>
+					Rua Vergueiro, 385 <br /><br /> Vila Marina - SP
+				</div>
 			</div>
 		</section>
 	);
